@@ -2,6 +2,8 @@
 .env.local
 .env.production
 
+.user-auth
+
 # Logs
 logs/
 *.log
