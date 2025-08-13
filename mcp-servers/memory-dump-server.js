@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import {
+  ListToolsRequestSchema,
+  CallToolRequestSchema,
+} from '@modelcontextprotocol/sdk/types.js';
 
 const server = new Server(
   { name: 'memory-server', version: '1.0.0' },
@@ -9,7 +13,7 @@ const server = new Server(
 
 server.onerror = (error) => console.error('[Error]', error.message);
 
-server.setRequestHandler('tools/list', async () => ({
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [{
     name: 'add_todo',
     description: 'Add a todo item',
@@ -21,7 +25,7 @@ server.setRequestHandler('tools/list', async () => ({
   }]
 }));
 
-server.setRequestHandler('tools/call', async (request) => {
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
   if (name === 'add_todo') {
     return { content: [{ type: 'text', text: `✅ Added: "${args.title}"` }] };

@@ -3,7 +3,8 @@
     "allow": [
       "Bash(node:*)",
       "Bash(npm install:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(npx:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
