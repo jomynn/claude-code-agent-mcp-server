@@ -5,7 +5,9 @@
       "args": ["./mcp-servers/memory-dump-server.js"],
       "env": {
         "MEMORY_FILE": "./project-memory.json",
-        "DUMP_DIR": "./memory-dumps"
+        "DUMP_DIR": "./memory-dumps",
+        "AUTO_DUMP": "true",
+        "LOG_LEVEL": "info"
       }
     },
     "filesystem": {
@@ -16,6 +18,11 @@
     "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {}
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-fetch"],
       "env": {}
     }
   }

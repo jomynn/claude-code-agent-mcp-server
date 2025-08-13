@@ -1,24 +1,16 @@
 {
-  "name": "claude-code-agent-mcp-server",
+  "name": "n8n-mcp-project",
   "version": "1.0.0",
-  "description": "Project with n8n and MCP integration",
-  "type": "module",
   "scripts": {
-    "start": "n8n start",
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "logs": "docker-compose logs -f n8n",
+    "status": "docker-compose ps",
     "claude": "claude",
-    "setup:cron": "./automation/setup-cron.sh",
-    "check:dumps": "./automation/check-dumps.sh",
-    "dump:manual": "./automation/auto-dump.sh",
-    "test:mcp": "claude '/mcp'",
-    "test:system": "./automation/check-dumps.sh",
-    "auth:manage": "node scripts/manage-auth.js",
-    "mcp:start": "node mcp-servers/memory-dump-server.js"
+    "test:mcp": "claude \"/mcp\"",
+    "test:n8n": "curl http://localhost:5678/rest/health"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.2"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+    "@modelcontextprotocol/sdk": "latest"
   }
 }
