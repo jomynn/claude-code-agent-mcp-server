@@ -1,0 +1,22 @@
+{
+  "name": "claude-code-agent-mcp-server",
+  "version": "1.0.0",
+  "description": "Project with n8n and MCP integration",
+  "type": "module",
+  "scripts": {
+    "start": "n8n start",
+    "claude": "claude",
+    "setup:cron": "./automation/setup-cron.sh",
+    "check:dumps": "./automation/check-dumps.sh",
+    "dump:manual": "./automation/auto-dump.sh",
+    "test:mcp": "claude '/mcp'",
+    "test:system": "./automation/check-dumps.sh"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

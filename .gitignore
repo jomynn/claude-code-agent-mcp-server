@@ -1,0 +1,33 @@
+# Environment files
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+
+# Memory dumps (optional)
+memory-dumps/*.json
+backups/
+
+# n8n data
+.n8n/
+n8n_data/
+
+# Node modules
+node_modules/
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/

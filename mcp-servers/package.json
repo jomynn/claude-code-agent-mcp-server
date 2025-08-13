@@ -1,0 +1,11 @@
+{
+  "name": "project-mcp-servers",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest"
+  },
+  "scripts": {
+    "start:memory": "node memory-dump-server.js"
+  }
+}
