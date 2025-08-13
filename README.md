@@ -1,4 +1,4 @@
-# n8n + MCP Integration Project
+# Claude code + n8n + MCP Integration Project
 
 A comprehensive setup integrating **n8n workflow automation** with **Claude Code** and **Model Context Protocol (MCP) servers** for intelligent project management, automated memory dumps, and AI-powered development workflows.
 
